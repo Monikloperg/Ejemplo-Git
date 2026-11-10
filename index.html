@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es Git y GitHub?</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --border: #d1d9e0;
+      --git: #f05133;
+      --github: #24292f;
+      --accent: #0969da;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--git), var(--github));
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem;
+    }
+    header h1 { margin: 0 0 .5rem; font-size: 2.4rem; }
+    header p { margin: 0; font-size: 1.1rem; opacity: .9; }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .card h2 { margin-top: 0; }
+    .git h2 { color: var(--git); }
+    .github h2 { color: var(--github); }
+    .tag {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+      margin-bottom: .25rem;
+    }
+    ul { padding-left: 1.2rem; }
+    section { margin-top: 2.5rem; }
+    h2.section-title { text-align: center; margin-bottom: 1.5rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td { padding: .75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: #eef1f4; }
+    tr:last-child td { border-bottom: none; }
+    pre {
+      background: var(--github);
+      color: #e6edf3;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: .9rem;
+    }
+    code { font-family: Consolas, "Courier New", monospace; }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+    }
+    .step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .6rem 1rem;
+      font-weight: 600;
+    }
+    .arrow { color: var(--muted); font-size: 1.4rem; }
+    footer { text-align: center; color: var(--muted); padding: 1.5rem 1rem; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>¿Qué es Git y GitHub?</h1>
+    <p>Control de versiones y colaboración en el desarrollo de software</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <article class="card git">
+        <span class="tag">Herramienta</span>
+        <h2>Git</h2>
+        <p>
+          Git es un <strong>sistema de control de versiones distribuido</strong>. Registra los cambios
+          que se hacen en los archivos de un proyecto, de modo que puedas volver a cualquier
+          versión anterior, comparar cambios y trabajar en paralelo sin pisar el trabajo de otros.
+        </p>
+        <ul>
+          <li>Funciona <strong>localmente</strong>, en tu propio computador.</li>
+          <li>Guarda el historial completo del proyecto.</li>
+          <li>Permite crear <strong>ramas</strong> para probar ideas sin afectar el código principal.</li>
+          <li>Es gratuito y de código abierto (creado por Linus Torvalds en 2005).</li>
+        </ul>
+      </article>
+
+      <article class="card github">
+        <span class="tag">Plataforma</span>
+        <h2>GitHub</h2>
+        <p>
+          GitHub es un <strong>servicio en la nube</strong> que aloja repositorios Git. Permite
+          compartir el código, colaborar con otras personas y gestionar proyectos desde el navegador.
+        </p>
+        <ul>
+          <li>Almacena tus repositorios en línea como copia de seguridad.</li>
+          <li><strong>Pull requests</strong> para revisar y aprobar cambios.</li>
+          <li><strong>Issues</strong> para reportar errores y planear tareas.</li>
+          <li>Herramientas extra: GitHub Actions, GitHub Pages, control de permisos.</li>
+        </ul>
+      </article>
+    </div>
+
+    <section>
+      <h2 class="section-title">Diferencias principales</h2>
+      <table>
+        <thead>
+          <tr><th></th><th>Git</th><th>GitHub</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Qué es</strong></td><td>Software de control de versiones</td><td>Plataforma web para alojar repositorios Git</td></tr>
+          <tr><td><strong>Dónde funciona</strong></td><td>En tu equipo (local)</td><td>En la nube (remoto)</td></tr>
+          <tr><td><strong>Necesita internet</strong></td><td>No</td><td>Sí</td></tr>
+          <tr><td><strong>Enfoque</strong></td><td>Historial y ramas del código</td><td>Colaboración, revisión y gestión de proyectos</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2 class="section-title">Flujo de trabajo básico</h2>
+      <div class="flow">
+        <span class="step">Modificar archivos</span><span class="arrow">→</span>
+        <span class="step">git add</span><span class="arrow">→</span>
+        <span class="step">git commit</span><span class="arrow">→</span>
+        <span class="step">git push</span><span class="arrow">→</span>
+        <span class="step">Pull request en GitHub</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Comandos esenciales</h2>
+      <pre><code>git init                     # crea un repositorio nuevo
+git status                   # muestra el estado de los archivos
+git add .                    # prepara todos los cambios
+git commit -m "mensaje"      # guarda los cambios en el historial
+git branch nueva-rama        # crea una rama
+git switch nueva-rama        # cambia de rama
+git remote add origin &lt;url&gt;  # conecta con el repositorio en GitHub
+git push -u origin nueva-rama  # sube la rama a GitHub</code></pre>
+    </section>
+  </main>
+
+  <footer>LAB10 · Ejemplo de Git y GitHub</footer>
+</body>
+</html>
