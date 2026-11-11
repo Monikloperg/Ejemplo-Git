@@ -22,3 +22,9 @@ build/
 
 # Configuración local de Claude Code
 .claude/settings.local.json
+
+# Llaves SSH (NUNCA subir la llave privada)
+.ssh/
+id_ed25519
+id_ed25519.pub
+*.pem
